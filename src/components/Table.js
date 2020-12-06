@@ -21,7 +21,6 @@ export default class Table extends Component {
 	compareByRank(a, b) {}
 
 	render() {
-		console.table(this.state.users);
 		return (
 			<div>
 				<table className='table table-striped'>

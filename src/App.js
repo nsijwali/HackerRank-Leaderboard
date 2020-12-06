@@ -6,43 +6,53 @@ import Rank from './components/Rank';
 import Table from './components/Table';
 
 export default class App extends Component {
+	constructor() {
+		super();
 
-  constructor() {
-    super();
+		this.state = {
+			sortBy: '',
+		};
+	}
 
-    this.state = {
-      sortBy: ""
-    }
+	handleClickAge(age) {
+		this.setState({
+			sortBy: age,
+		});
+		alert(age);
+	}
 
-  }
+	handleClickName() {
+		this.setState({
+			sortBy: 'name',
+		});
+	}
 
-  handleClickAge() {
-  }
+	handleClickPoints() {
+		this.setState({
+			sortBy: 'points',
+		});
+	}
 
-  handleClickName() {
-  }
+	handleClickRank() {
+		this.setState({
+			sortBy: 'rank',
+		});
+	}
 
-  handleClickPoints() {
-  }
-
-  handleClickRank() {
-  }
-
-  render() {
-    return (
-      <div className="text-center buttons">
-        <header className="text-center">
-          <h1>Leaderboard</h1>
-        </header>
-        <div className="text-center buttons">
-          <Age></Age>
-          <Name></Name>
-          <Points></Points>
-          <Rank></Rank>
-          <Table></Table>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className='text-center buttons'>
+				<header className='text-center'>
+					<h1>Leaderboard</h1>
+				</header>
+				<div className='text-center buttons'>
+					<Age></Age>
+					<Name></Name>
+					<Points></Points>
+					<Rank></Rank>
+					<Table></Table>
+				</div>
+			</div>
+		);
+	}
 }
-
